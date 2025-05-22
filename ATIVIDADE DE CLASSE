@@ -1,0 +1,112 @@
+1.
+
+def somar(a, b):
+    return a + b
+
+def subtrair(a, b):
+    return a - b
+
+def multiplicar(a, b):
+    return a * b
+
+def dividir(a, b):
+    if b != 0:
+        return a / b
+    else:
+        return "Erro: divisão por zero"
+
+# Exemplo de uso:
+a = float(input("Digite o primeiro número: "))
+b = float(input("Digite o segundo número: "))
+operacao = input("Escolha a operação (+, -, *, /): ")
+
+if operacao == '+':
+    print("Resultado:", somar(a, b))
+elif operacao == '-':
+    print("Resultado:", subtrair(a, b))
+elif operacao == '*':
+    print("Resultado:", multiplicar(a, b))
+elif operacao == '/':
+    print("Resultado:", dividir(a, b))
+else:
+    print("Operação inválida.")
+
+
+2.
+
+def km_para_milhas(km):
+    return km * 0.621371
+
+def metros_para_centimetros(m):
+    return m * 100
+
+def litros_para_mililitros(l):
+    return l * 1000
+
+# Exemplos:
+print(km_para_milhas(10), "milhas")
+print(metros_para_centimetros(5), "cm")
+print(litros_para_mililitros(2), "ml")
+
+
+3.
+
+def contar_caracteres(frase):
+    return len(frase.replace(" ", ""))
+
+# Exemplo:
+print("Total de caracteres:", contar_caracteres("Olá, mundo!"))
+
+
+4.
+
+def calcular_media(n1, n2, n3):
+    media = (n1 + n2 + n3) / 3
+    if media >= 7:
+        return f"Média: {media:.2f} - Aprovado"
+    else:
+        return f"Média: {media:.2f} - Reprovado"
+
+# Exemplo:
+print(calcular_media(6.5, 7.0, 8.0))
+
+
+5.
+
+def tabuada(numero):
+    for i in range(1, 11):
+        print(f"{numero} x {i} = {numero * i}")
+
+# Exemplo:
+tabuada(7)
+
+
+6.
+
+def contar_vogais(texto):
+    vogais = "aeiouAEIOU"
+    return sum(1 for letra in texto if letra in vogais)
+
+# Exemplo:
+print("Vogais:", contar_vogais("Python é divertido"))
+
+
+7.
+
+import random
+
+def lancar_dado():
+    return random.randint(1, 6)
+
+# Exemplo:
+print("Dado lançado:", lancar_dado())
+
+
+8.
+
+def eh_palindromo(palavra):
+    palavra = palavra.lower().replace(" ", "")
+    return palavra == palavra[::-1]
+
+# Exemplo:
+print("É palíndromo?", eh_palindromo("arara"))
